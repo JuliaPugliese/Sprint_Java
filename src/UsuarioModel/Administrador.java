@@ -35,5 +35,12 @@ public class Administrador extends Usuario {
         this.email = email;
     }
 
+    @Override
+    public String toString() {
+        return   nomeAdm + "(" + super.getId() +") " +
+                email;
+    }
+
+
 }
 

@@ -50,13 +50,17 @@ public class Main {
             var opcao = scanner.nextInt();
             scanner.nextLine();
 
-            if (opcao == 0) {
-                System.out.println("Encerrando sistema;");
-                break;
-            } else if (opcao == 1) {
-                abrirMenuCliente();
-            } else if (opcao == 2) {
-                verificarAdministrador();
+            switch (opcao) {
+                case 1 -> abrirMenuCliente();
+                case 2 -> verificarAdministrador();
+                case 0 -> {
+                    System.out.println("Encerrando sistema;");
+                    System.exit(0);
+                }
+                default -> {
+                    System.out.println("Opção inválida");
+                }
+
             }
         }
 
@@ -90,30 +94,22 @@ public class Main {
             var opcao = scanner.nextInt();
             scanner.nextLine();
 
-            if (opcao == 0) {
-                System.out.println("Encerrando sistema;");
-                break;
-            }
-            else if (opcao == 1) {
-                criarConta();
-            }
-            else if (opcao == 11) {
-                editarInformacoesCadastro();
-            }
-            else if (opcao == 2) {
-                consultarProdutoPlano();
-            }
-            else if (opcao == 21) {
-                filtrarProdutosPlanosPrecoDecrescente();
-            }
-            else if (opcao == 22) {
-                filtrarProdutosPlanosPrecoCrescente();
-            }
-            else if (opcao == 3) {
-                enviarPerguntasComentarios();
+            switch (opcao) {
+                case 1 -> criarConta();
+                case 11 -> editarInformacoesCadastro();
+                case 2 -> consultarProdutoPlano();
+                case 21 -> filtrarProdutosPlanosPrecoDecrescente();
+                case 22 -> filtrarProdutosPlanosPrecoCrescente();
+                case 3 -> enviarPerguntasComentarios();
+                case 0 -> {
+                    System.out.println("Encerrando sistema;");
+                    System.exit(0);
+                }
+                default -> {
+                    System.out.println("Opção inválida");
+                }
             }
         }
-
     }
 
     public static void verificarAdministrador() {
@@ -126,12 +122,10 @@ public class Main {
 
         Optional<Administrador> optional = administradores.stream()
                 .filter(pessoa -> pessoa.getNomeUsuario().equals(nomeUsuarioAdm) & pessoa.getSenha().equals(senhaAdm)).findAny();
+        optional.ifPresent(System.out::println);
 
         if (optional.isPresent()) {
-            administradores.stream()
-                    .filter(pessoa -> pessoa.getNomeUsuario().equals(nomeUsuarioAdm) & pessoa.getSenha().equals(senhaAdm)).toList()
-                    .forEach(System.out::println);
-            System.out.println("Abrindo menu");
+            System.out.println("Abrindo menu...");
             abrirMenuAdministrador();
         } else {
             System.out.println("Usuário ou senha inválidos");
@@ -145,7 +139,8 @@ public class Main {
                     Bem vindo ao sistema da SalesForce, digite a opção desejada:\r
                     1) Cadastrar usuário \r
                         11) Editar informações de cadastro \r
-                        12) Filtrar usuários por país \r
+                        12) Listar usuários cadastrados \r
+                        13) Filtrar usuários por país \r
                     2) Cadastrar produto\r
                         21) Editar informações do produto \r
                     3) Cadastrar plano \r
@@ -158,54 +153,27 @@ public class Main {
             var opcao = scanner.nextInt();
             scanner.nextLine();
 
-            if (opcao == 0) {
-                System.out.println("Encerrando sistema;");
-                break;
-            }
-            else if (opcao == 1) {
-                criarConta();
-            }
-            else if (opcao == 11) {
-                editarInformacoesCadastro();
-            }
-            else if (opcao == 12) {
-
-                System.out.println("\r\n");
-                System.out.println("Filtrar usuários pelo País: ");
-                var buscaPais = (scanner.nextLine());
-
-                System.out.println("Numero de usuário do(a) " + buscaPais + " é de: " + usuariosCadastrados.stream()
-                        .filter(pessoa -> pessoa.getPais().equalsIgnoreCase(buscaPais)).count());
-
-                usuariosCadastrados.stream()
-                        .filter(pessoa -> pessoa.getPais().equalsIgnoreCase(buscaPais)).toList()
-                        .forEach(System.out::println);
-
-            }
-            else if (opcao == 2) {
-                cadastrarProduto();
-            }
-            else if (opcao == 21) {
-                editarInformacoesProduto();
-            }
-            else if (opcao == 3) {
-                cadastrarPlano();
-            }
-            else if (opcao == 31) {
-                editarInformacoesPlano();
-            }
-            else if (opcao == 4) {
-                consultarProdutoPlano();
-            }
-            else if (opcao == 41) {
-                filtrarProdutosPlanosPrecoCrescente();
-            }
-            else if (opcao == 42) {
-                filtrarProdutosPlanosPrecoDecrescente();
+            switch (opcao) {
+                case 1 -> criarConta();
+                case 11 -> editarInformacoesCadastro();
+                case 12 -> listarUsuarios();
+                case 13 -> filtrarUsuariosPais();
+                case 2 -> cadastrarProduto();
+                case 21 -> editarInformacoesProduto();
+                case 3 -> cadastrarPlano();
+                case 31 -> editarInformacoesPlano();
+                case 4 -> consultarProdutoPlano();
+                case 41 -> filtrarProdutosPlanosPrecoDecrescente();
+                case 42 -> filtrarProdutosPlanosPrecoCrescente();
+                case 0 -> {
+                    System.out.println("Você esta sendo deslogado. \r\nEncerrando sistema...");
+                    System.exit(0);
+                }
+                default -> {
+                    System.out.println("Opção inválida");
+                }
             }
         }
-
-
     }
 
     public static void editarInformacoesProduto(){
@@ -215,13 +183,10 @@ public class Main {
 
         Optional<Produto> optional = produtosCadastrados.stream()
                 .filter(item -> item.getId() == (editarIdProduto)).findAny();
+        optional.ifPresent(System.out::println);
 
 
         if (optional.isPresent()) {
-
-            produtosCadastrados.stream()
-                    .filter(produto -> produto.getId() == (editarIdProduto)).toList()
-                    .forEach(System.out::println);
 
             System.out.println("Digite informação a ser editada: ");
             var informacao = (scanner.nextLine()).replaceAll("[áàâãä]", "a").replaceAll("[í,ì]", "i").replaceAll("[é,è]", "e");
@@ -236,11 +201,7 @@ public class Main {
 
                 System.out.println("\r\nO nome foi alterado com sucesso");
 
-                //TESTE ALTERAÇÃO DO NOME
 
-                produtosCadastrados.stream()
-                        .filter(produto -> produto.getNome().equals(atualizacao)).toList()
-                        .forEach(System.out::println);
             } else if (informacao.equalsIgnoreCase("descrição")) {
                 System.out.println("Digite a descrição atual:");
                 var atualizacao = (scanner.nextLine());
@@ -308,13 +269,10 @@ public class Main {
 
         Optional<Plano> optional = planosCadastrados.stream()
                 .filter(item -> item.getId() == (editarIdPlano)).findAny();
+        optional.ifPresent(System.out::println);
 
 
         if (optional.isPresent()) {
-
-            planosCadastrados.stream()
-                    .filter(plano -> plano.getId() == (editarIdPlano)).toList()
-                    .forEach(System.out::println);
 
             System.out.println("Digite informação a ser editada:");
             var informacao = (scanner.nextLine()).replaceAll("[áàâãä]", "a").replaceAll("[í,ì]", "i").replaceAll("[é,è]", "e");
@@ -329,11 +287,6 @@ public class Main {
 
                 System.out.println("\r\nO nome foi alterado com sucesso");
 
-                //TESTE ALTERAÇÃO DO NOME
-
-                planosCadastrados.stream()
-                        .filter(plano -> plano.getNome().equals(atualizacao)).toList()
-                        .forEach(System.out::println);
             } else if (informacao.equalsIgnoreCase("descrição")) {
                 System.out.println("Digite a descrição atual:");
                 var atualizacao = (scanner.nextLine());
@@ -405,13 +358,9 @@ public class Main {
 
         Optional<Cliente> optional = usuariosCadastrados.stream()
                 .filter(pessoa-> pessoa.getNomeUsuario().equals(nomeUsuario) & pessoa.getSenha().equals(senha)).findAny();
-
+        optional.ifPresent(System.out::println);
 
         if (optional.isPresent()) {
-
-            usuariosCadastrados.stream()
-                    .filter(pessoa -> pessoa.getNomeUsuario().equalsIgnoreCase(nomeUsuario)).toList()
-                    .forEach(System.out::println);
 
             System.out.println("Digite informação a ser editada:");
             var informacao = (scanner.nextLine()).replaceAll("[áàâãä]","a").replaceAll("[í,ì]","i").replaceAll("[é,è]","e");
@@ -426,10 +375,6 @@ public class Main {
 
                 System.out.println("\r\nSeu nome foi alterado com sucesso");
 
-                //TESTE ALTERAÇÃO DO NOME
-                usuariosCadastrados.stream()
-                        .filter(pessoa -> pessoa.getNomeCompleto().equalsIgnoreCase(atualizacao)).toList()
-                        .forEach(System.out::println);
             }
 
             else if (informacao.equalsIgnoreCase("telefone")) {
@@ -737,6 +682,23 @@ public class Main {
         System.out.println(planosCadastrados);
         produtosCadastrados.sort(Comparator.comparingDouble(Produto::getPreco).reversed());
         System.out.println(produtosCadastrados);
+    }
+    public static void filtrarUsuariosPais(){
+
+        System.out.println("\r\nFiltrar usuários pelo País: ");
+        var buscaPais = (scanner.nextLine());
+
+        System.out.println("Numero de usuário do(a) " + buscaPais + " é de: " + usuariosCadastrados.stream()
+                .filter(pessoa -> pessoa.getPais().equalsIgnoreCase(buscaPais)).count());
+
+        usuariosCadastrados.stream()
+                .filter(pessoa -> pessoa.getPais().equalsIgnoreCase(buscaPais)).toList()
+                .forEach(System.out::println);
+    }
+
+    public static void listarUsuarios(){
+        usuariosCadastrados.stream().toList().forEach(System.out::println);
+        System.out.println("Numero de usuários cadastrados é de: " + usuariosCadastrados.stream().toList().size());
     }
 
     public static void enviarPerguntasComentarios(){
