@@ -2,7 +2,6 @@ package ServicoModel;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.Scanner;
 
 public class Produto {
@@ -68,72 +67,6 @@ public class Produto {
 
     public void setSucessPlans(Plano sucessPlans) {
         this.sucessPlans = sucessPlans;
-    }
-
-    public void editarInformacoesPlanoPagamento(int editarIdPlano){
-
-        System.out.println("Digite informação a ser editada:");
-        var informacao = (scanner.nextLine()).replaceAll("[áàâãä]", "a").replaceAll("[í,ì]", "i").replaceAll("[é,è]", "e");
-
-        if (informacao.equalsIgnoreCase("nome")) {
-            System.out.println("Digite o nome atualizado:");
-            var atualizacao = (scanner.nextLine());
-
-            this.planoPagamento.stream()
-                    .filter(plano -> plano.getIdPlano() == (editarIdPlano)).toList()
-                    .forEach(plano -> plano.setNomePlano(atualizacao));
-
-            System.out.println("\r\nO nome foi alterado com sucesso");
-
-
-        } else if (informacao.equalsIgnoreCase("descrição")) {
-            System.out.println("Digite a descrição atual:");
-            var atualizacao = (scanner.nextLine());
-
-            planoPagamento.stream()
-                    .filter(plano -> plano.getIdPlano() == (editarIdPlano)).toList()
-                    .forEach(plano -> plano.setDescricaoPlano(atualizacao));
-
-            System.out.println("\r\nA descrição foi alterada com sucesso");
-
-        } else if (informacao.equalsIgnoreCase("recursos")) {
-            System.out.println("Digite os recursos atuais:");
-            var atualizacao = (scanner.nextLine());
-
-            planoPagamento.stream()
-                    .filter(plano -> plano.getIdPlano() == (editarIdPlano)).toList()
-                    .forEach(plano -> plano.setRecursosPlano(atualizacao));
-
-            System.out.println("\r\nOs recursos foram alterados com sucesso");
-
-        } else if (informacao.equalsIgnoreCase("id")) {
-            System.out.println("Digite o ID atual:");
-            var atualizacao = (scanner.nextInt());
-            scanner.nextLine();
-
-            planoPagamento.stream()
-                    .filter(plano -> plano.getIdPlano() == (editarIdPlano)).toList()
-                    .forEach(plano -> plano.setIdPlano(atualizacao));
-
-            System.out.println("\r\nO ID foi alterado com sucesso");
-
-        } else if (informacao.equalsIgnoreCase("preço")) {
-            System.out.println("Digite o preço atual:");
-            var atualizacao = (scanner.nextFloat());
-            scanner.nextLine();
-
-            planoPagamento.stream()
-                    .filter(plano -> plano.getIdPlano() == (editarIdPlano)).toList()
-                    .forEach(plano -> plano.setPrecoPlano(atualizacao));
-
-            System.out.println("\r\nO preço foi alterado com sucesso");
-
-        } else {
-            System.out.println("Opção inválida");
-        }
-
-
-
     }
 
     @Override
