@@ -19,15 +19,15 @@ public class Main {
 
 
     public static void main(String[] args) {
-        usuariosCadastrados = new ArrayList<Cliente>();
+        usuariosCadastrados = new ArrayList<>();
 
-        administradores = new ArrayList<Administrador>(List.of(
+        administradores = new ArrayList<>(List.of(
                 new Administrador(554166, "554166", "fiap1", "Ana Janeth", "rm554166@fiap.com.br"),
                 new Administrador(553635, "553635", "fiap2", "Gabriel Torres", "rm553635@fiap.com.br"),
                 new Administrador(553427, "553427", "fiap3", "Julia Gonzalez", "rm553427@fiap.com.br")
         ));
 
-        produtosCadastrados = new ArrayList<Produto>(List.of(
+        produtosCadastrados = new ArrayList<>(List.of(
                 new Produto("Sales Cloud", 123121, "Venda mais rápido e com mais inteligência com qualquer uma das nossas edições de CRM totalmente personalizáveis.", new ArrayList<>(List.of(
                         new Plano("Starter", "Ferramentas de vendas e atendimento ao cliente em um app", 41, 25),
                         new Plano("Sales Professional", "Solução de vendas completa para equipes de qualquer tamanho", 42, 80),
@@ -49,7 +49,7 @@ public class Main {
                 )))
         ));
 
-        sucessPlans = new ArrayList<Plano>(List.of(
+        sucessPlans = new ArrayList<>(List.of(
                 new Plano("Standard", "Explore recursos autoguiados, como aprendizado online, demonstrações e conselhos da comunidade. Incluído em todas as licenças", "Trailhead, Portal de Ajuda, Comunidade de Trailblazers, Success Center, Suporte Técnico", 1),
                 new Plano("Premier", "Obtenha ajuda especializada adicional, orientação de adoção, treinamento e suporte ao vivo. 30% das taxas de licença aplicáveis", "Trailhead, Portal de Ajuda, Comunidade de Trailblazers, Success Center, Suporte Técnico", 2),
                 new Plano("Signature", "Adicione gerenciamento proativo de conta e de incidentes, prontidão para eventos e muito mais.", "Trailhead, Portal de Ajuda, Comunidade de Trailblazers, Success Center, Suporte Técnico, Serviços Proativos, Gerenciamento Técnico de Conta, Gerenciamento de Eventos-Chave", 3)
@@ -74,9 +74,7 @@ public class Main {
                     System.out.println("Encerrando sistema;");
                     System.exit(0);
                 }
-                default -> {
-                    System.out.println("Opção inválida");
-                }
+                default -> System.out.println("Opção inválida");
 
             }
         }
@@ -122,9 +120,7 @@ public class Main {
                     System.out.println("Encerrando sistema;");
                     System.exit(0);
                 }
-                default -> {
-                    System.out.println("Opção inválida");
-                }
+                default -> System.out.println("Opção inválida");
             }
         }
     }
@@ -190,9 +186,7 @@ public class Main {
                     System.out.println("Você esta sendo deslogado. \r\nEncerrando sistema...");
                     System.exit(0);
                 }
-                default -> {
-                    System.out.println("Opção inválida");
-                }
+                default -> System.out.println("Opção inválida");
             }
         }
     }
