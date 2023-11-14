@@ -475,7 +475,7 @@ public class Main {
                     .forEach(System.out::println);
 
             System.out.println("Digite informação a ser editada:");
-            var informacao = (scanner.nextLine()).replaceAll("[áàâãä]", "a").replaceAll("[í,ì]", "i").replaceAll("[é,è]", "e");
+            var informacao = (scanner.nextLine()).replaceAll("[áàâãä]", "a").replaceAll("[í,ì]", "i").replaceAll("[é,è]", "e").replaceAll("ç", "c");
 
             if (informacao.equalsIgnoreCase("nome")) {
                 System.out.println("Digite o nome atualizado:");
@@ -488,7 +488,7 @@ public class Main {
                 System.out.println("\r\nO nome foi alterado com sucesso");
 
 
-            } else if (informacao.equalsIgnoreCase("descrição")) {
+            } else if (informacao.equalsIgnoreCase("descricao")) {
                 System.out.println("Digite a descrição atual:");
                 var atualizacao = (scanner.nextLine());
 
