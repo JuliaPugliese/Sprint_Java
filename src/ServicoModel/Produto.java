@@ -2,10 +2,8 @@ package ServicoModel;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Produto {
-    static Scanner scanner = new Scanner(System.in);
     private String nomeProduto;
     private int idProduto;
     private String descricaoProduto;

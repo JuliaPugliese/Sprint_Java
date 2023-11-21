@@ -11,7 +11,7 @@ public class Conta {
     private static int contadorContas = 1;
     private int numeroConta;
     private Cliente cliente;
-    private List<Servico> carrinho = new ArrayList<>();
+    private List<Produto> carrinho = new ArrayList<>();
     private double saldoCarrinho = 0.0;
 
     public Conta(int numeroConta, Cliente cliente) {
@@ -37,11 +37,11 @@ public class Conta {
     }
 
 
-    public List<Servico> getCarrinho() {
+    public List<Produto> getCarrinho() {
         return carrinho;
     }
 
-    public void setCarrinho(List<Servico> carrinho) {
+    public void setCarrinho(List<Produto> carrinho) {
         this.carrinho = carrinho;
     }
 
@@ -70,14 +70,16 @@ public class Conta {
 //
 //    }
 
-    public void calcularCompra(List<Servico> carrinho, double saldoCarrinho ) {
+    public void calcularCompra(List<Produto> carrinho) {
 
-        Optional<Servico> optional = carrinho.stream()
-                .filter(c -> c.getPreco() == 0).findAny();
+        Optional<Plano> optional = carrinho.stream()
+                .flatMap(produto -> produto.getPlanoPagamento().stream().filter(c -> c.getPrecoPlano() == 0))
+                .findAny();
         if (optional.isPresent()) {
             System.out.println("Entre em contato conosco para fazer o seu orçamento");
         } else {
-            carrinho.stream().filter(c -> c.getPreco() > 0).forEach(c -> setSaldoCarrinho(c.getPreco() + saldoCarrinho));
+            carrinho.stream().flatMap(produto -> produto.getPlanoPagamento().stream().filter(c -> c.getPrecoPlano() > 0))
+                    .forEach(c -> setSaldoCarrinho(c.getPrecoPlano() + saldoCarrinho));
             System.out.println("Valor total:" + saldoCarrinho);
         }
 

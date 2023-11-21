@@ -744,15 +744,28 @@ public class Main {
                 .forEach(System.out::println);
     }
 
-    public void adicionarAoCarrinho(Produto produto, List<Produto> carrinho) {
-        if (verificarUsuario().isPresent()) {
-            carrinho.add(produto);
-            System.out.println("Produto adicionado ao carrinho");
-
-        }else {System.out.println("Para adicionar itens ao carrinho é necessário criar uma conta");
-            criarConta();
-        }
-    }
+//    public static void adicionarAoCarrinho() {
+//        if (verificarUsuario().isPresent()) {
+//
+//            System.out.println("Digite o nome ou ID do produto:");
+//            String buscaproduto = scanner.nextLine();
+//
+//            Conta.setCarrinho(produtosCadastrados.stream()
+//                    .filter(produto -> produto.getNomeProduto().equalsIgnoreCase(buscaproduto) || Integer.toString(produto.getIdProduto()).equals(buscaproduto))
+//                    .toList());
+//            System.out.println("Produto adicionado ao carrinho");
+//
+//        }
+//        else {System.out.println("Para adicionar itens ao carrinho é necessário criar uma conta");
+//            criarConta();
+//            System.out.println("Digite o nome ou ID do produto:");
+//            String buscaproduto = scanner.nextLine();
+//            List<Produto> carrinho = produtosCadastrados.stream()
+//                    .filter(produto -> produto.getNomeProduto().equalsIgnoreCase(buscaproduto) || Integer.toString(produto.getIdProduto()).equals(buscaproduto))
+//                    .toList();
+//            System.out.println("Produto adicionado ao carrinho");
+//        }
+//    }
     //editar metodo verificarUsuario()
 
     public static void enviarPerguntasComentarios(){
