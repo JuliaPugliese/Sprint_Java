@@ -16,6 +16,21 @@ O objetivo é permitir que o usuário consiga acessar um portal onde encontra di
 
 Armazenar dados de produtos e usuários do site da Salesforce de maneira segura e editável. Auxiliar a empresa a avaliar fatores como número de usuários cadastrados e quantidade de usuários por país, por exemplo.
 
+## Inspirações:
+
+### Sistema de faturamento em JAVA
+O objetivo principal deste projeto de sistema de faturamento é calcular as contas automaticamente, ou seja, sem nenhum cálculo manual. Você deve começar a construir este projeto com uma interface simples que exigirá que o usuário insira o nome do item, o preço por unidade e a quantidade. De acordo com esses detalhes, o sistema irá gerar uma fatura mencionando o valor total de dinheiro que deve ser pago.
+
+### Sistema de Login em Java
+O código acima cria um sistema de login em Java que pede ao usuário um nome de usuário e uma senha e verifica se as informações estão corretas.
+
+### Lista de Compras
+Aplicativo de lista de compras: crie um aplicativo simples que permita ao usuário adicionar, editar e excluir itens de uma lista de compras.
+
+### Sistema de gerenciamento de biblioteca:
+O projeto de gestão de bibliotecas, por sua vez, permite criar um sistema onde todas essas informações podem ser armazenadas e recuperadas eletronicamente em um banco de dados informatizado.
+O sistema precisa permitir o gerenciamento de livros, incluindo adição, edição, empréstimo e devolução .Além de permitir que bibliotecários e alunos encontrem livros sem complicações por meio de uma busca por nome e o autor.
+
 ## Como rodar o projeto
 
 A primeira tela exibida para o usuário é a de login, limitando o usuário a essas opções primeiramente.
@@ -112,4 +127,12 @@ Conforme o usuário digita alguma dessas opções ele é direcionado a uma condi
 
 ## Próximos passos
 
-A partir de agora o objetivo é inserir melhorias no código como a verificação de dados como RG, CPF, Telefone e E-mail e a possibilidade de inserção de novas opções nos menus de usuário e de administrador.
+A partir de agora o objetivo é inserir melhorias no código como a verificação de dados como RG, CPF, Telefone e E-mail, a possibilidade de inserção de novas opções nos menus de usuário e de administrador e a implementação da classe Conta que desempenhará o papel do carrinho de compras de um site.
+
+## Equipe
+
+Gabriel Torres Fernandes - [gabrieltf1901](https://github.com/gabrieltf1901)
+
+Julia Gonzalez Pugliese Ribeiro - [JuliaPugliese](https://github.com/JuliaPugliese) 
+
+Ana Janeth Nicolau Cassule 
