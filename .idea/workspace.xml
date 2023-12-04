@@ -7,9 +7,7 @@
     <list default="true" id="9401eb65-0304-420f-aed3-da7e0c6fba76" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServicoModel/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServicoModel/Conta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServicoModel/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServicoModel/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
