@@ -52,22 +52,25 @@ Para executar o programa como administrador o usuário deve possuir uma conta de
 
 1. Cadastrar usuário
 	
-    11. Editar informações de cadastro
-    12. Listar usuários cadastrados
-	13. Filtrar usuários por país
+    11 . Editar informações de cadastro
+
+    12 . Listar usuários cadastrados
+
+	13 . Filtrar usuários por país
 2. Cadastrar produto
 	
-    21. Editar informações do produto
+    21 . Editar informações do produto
 3. Cadastrar plano de pagamento
 	
-    31. Editar informações dos planos de pagamento
+    31 . Editar informações dos planos de pagamento
 4. Cadastrar sucessplan
 	
-    31. Editar informações dos sucessplans
+    31 . Editar informações dos sucessplans
 5. Consultar produto
 	
-    41. Filtrar planos de pagamento por preço mais caro
-	42. Filtrar planos de pagamento por preço mais barato
+    41 . Filtrar planos de pagamento por preço mais caro
+
+	42 . Filtrar planos de pagamento por preço mais barato
 0. Sair
 
 Conforme o usuário digita alguma dessas opções ele é direcionado a uma condição específica, onde: 
@@ -98,12 +101,13 @@ Para executar o programa como cliente o usuário deve somente selecionar a opç�
 
 1. Criar conta 
 	
-    11. Editar informações de cadastro
+    11 . Editar informações de cadastro
 
 2. Consultar produto
 	
-    21. Filtrar planos de pagamento por preço mais caro
-	22. Filtrar planos de pagamento por preço mais barato
+    21 . Filtrar planos de pagamento por preço mais caro
+    
+	22 . Filtrar planos de pagamento por preço mais barato
 
 3. Enviar perguntas ou comentários
 	
