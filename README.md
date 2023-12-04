@@ -31,8 +31,10 @@ Aplicativo de lista de compras: crie um aplicativo simples que permita ao usuár
 O projeto de gestão de bibliotecas, por sua vez, permite criar um sistema onde todas essas informações podem ser armazenadas e recuperadas eletronicamente em um banco de dados informatizado.
 O sistema precisa permitir o gerenciamento de livros, incluindo adição, edição, empréstimo e devolução .Além de permitir que bibliotecários e alunos encontrem livros sem complicações por meio de uma busca por nome e o autor.
 
-## Como rodar o projeto
+## Funcionamento
+Todas as funções dos menus são implementadas atraves de métodos criados na classe main e o armazenamento de Usuários Cadastrados (classe Cliente), Administradores (classe Administrador), Produtos Cadastrados (classe Produto) e SucessPlans (classe Plano) é feito por meio de ArrayLists também implementadas na classe main.
 
+## Como rodar o projeto
 A primeira tela exibida para o usuário é a de login, limitando o usuário a essas opções primeiramente.
 1. Usuário
 2. Administrador
@@ -106,7 +108,7 @@ Para executar o programa como cliente o usuário deve somente selecionar a opç�
 2. Consultar produto
 	
     21 . Filtrar planos de pagamento por preço mais caro
-    
+
 	22 . Filtrar planos de pagamento por preço mais barato
 
 3. Enviar perguntas ou comentários
