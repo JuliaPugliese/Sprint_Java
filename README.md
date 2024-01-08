@@ -141,5 +141,3 @@ Gabriel Torres Fernandes - [gabrieltf1901](https://github.com/gabrieltf1901)
 
 Julia Gonzalez Pugliese Ribeiro - [JuliaPugliese](https://github.com/JuliaPugliese) 
 
-Ana Janeth Nicolau Cassule 
-
