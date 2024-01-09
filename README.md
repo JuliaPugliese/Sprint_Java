@@ -1,4 +1,13 @@
 # Challenge - SalesForce
+O Challenge é um projeto acadêmico da FIAP que apresenta os seus alunos a um desafio real proposto por uma empresa parceira, nesse caso a SalesForce, com o objetivo de capacitar o aluno a desenvolver um projeto, simulando a experiência profissional, utilizando técnicas, ferramentas, metodologias e boas práticas trabalhadas ao longo do curso.
+
+### Desafio da vez: 
+Criar um novo portal da Salesforce com acessibilidade e que consiga capturar mais clientes.
+
+### Requisitos da disciplina Domain Driven Design:
+Crie um diagrama de classes com as entidades que seu projeto precisará, definindo atributos e métodos para cada classe, o implemente em um novo projeto Java usando uma IDE de sua escolha com a funcionalidade de cadastro, coletando as informações do usuário e armazenando-as em uma estrutura adequada.
+
+# Projeto 
 O projeto consiste em um menu que direciona o usuário a duas opções de identificação, onde, na primeira, o usuário se identifica como cliente e na segunda como administrador. Esses dois tipos de usuário podem realizar diferentes funções dentro do sistema. 
 
 - O usuário tem acesso aos produtos, planos e sua própria conta. Já o administrador tem acesso às contas de todos os usuários cadastrados e aos produtos e planos, podendo cadastrar e editar dados dos mesmos.
