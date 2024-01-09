@@ -1,7 +1,7 @@
 # Challenge - SalesForce
-O projeto consiste em um menu que direciona o usuario a duas opções de identificação, onde, na primeira, o usuario se identifica como cliente e na segunda como administrador. Esses dois tipos de usuario podem realizar diferentes funções dentro do sistema. 
+O projeto consiste em um menu que direciona o usuário a duas opções de identificação, onde, na primeira, o usuário se identifica como cliente e na segunda como administrador. Esses dois tipos de usuário podem realizar diferentes funções dentro do sistema. 
 
-- O usuario tem acesso aos produtos, planos e sua propria conta. Já o administrador tem acesso as contas de todos os usuarios cadastrados e aos produtos e planos, podendo cadastrar e editar dados dos mesmos.
+- O usuário tem acesso aos produtos, planos e sua própria conta. Já o administrador tem acesso às contas de todos os usuários cadastrados e aos produtos e planos, podendo cadastrar e editar dados dos mesmos.
 
 O objetivo é permitir que o usuário consiga acessar um portal onde encontra diversas opções referentes a plataforma web e armazenar os dados desse usuário de forma segura. Sem eles o site seria ineficiente e dados importantes sobre os usuários seriam perdidos.
 
@@ -29,10 +29,10 @@ Aplicativo de lista de compras: crie um aplicativo simples que permita ao usuár
 
 ### Sistema de gerenciamento de biblioteca:
 O projeto de gestão de bibliotecas, por sua vez, permite criar um sistema onde todas essas informações podem ser armazenadas e recuperadas eletronicamente em um banco de dados informatizado.
-O sistema precisa permitir o gerenciamento de livros, incluindo adição, edição, empréstimo e devolução .Além de permitir que bibliotecários e alunos encontrem livros sem complicações por meio de uma busca por nome e o autor.
+O sistema precisa permitir o gerenciamento de livros, incluindo adição, edição, empréstimo e devolução. Além de permitir que bibliotecários e alunos encontrem livros sem complicações por meio de uma busca por nome e o autor.
 
 ## Funcionamento
-Todas as funções dos menus são implementadas atraves de métodos criados na classe main e o armazenamento de Usuários Cadastrados (classe Cliente), Administradores (classe Administrador), Produtos Cadastrados (classe Produto) e SucessPlans (classe Plano) é feito por meio de ArrayLists também implementadas na classe main.
+Todas as funções dos menus são implementadas através de métodos criados na classe main e o armazenamento de Usuários Cadastrados (classe Cliente), Administradores (classe Administrador), Produtos Cadastrados (classe Produto) e SucessPlans (classe Plano) é feito por meio de ArrayLists também implementadas na classe main.
 
 ## Como rodar o projeto
 A primeira tela exibida para o usuário é a de login, limitando o usuário a essas opções primeiramente.
@@ -99,7 +99,7 @@ Conforme o usuário digita alguma dessas opções ele é direcionado a uma condi
 
 ### Executando o programa como cliente
 
-Para executar o programa como cliente o usuário deve somente selecionar a opção "Usuario", após isso ele é redirecionado para um menu onde tem as opções de escolha: 
+Para executar o programa como cliente o usuário deve somente selecionar a opção "Usuário", após isso ele é redirecionado para um menu onde tem as opções de escolha: 
 
 1. Criar conta 
 	
@@ -126,7 +126,7 @@ Conforme o usuário digita alguma dessas opções ele é direcionado a uma condi
 
     - **41. Filtrar planos de pagamento por preço mais caro:** e **42. Filtrar planos de pagamento por preço mais barato:** mostram todos os planos de pagamento disponíveis classificados por valor, do mais alto para o mais baixo e vice-versa.
 
-- **3. Enviar perguntas ou comentários:** Permite que o usuário envie perguntas ou comentarios que ficam registrados na sua conta.
+- **3. Enviar perguntas ou comentários:** Permite que o usuário envie perguntas ou comentários que ficam registrados na sua conta.
 
 - **0. Sair:** Para a execução do programa.
 
@@ -140,4 +140,3 @@ A partir de agora o objetivo é inserir melhorias no código como a verificaçã
 Gabriel Torres Fernandes - [gabrieltf1901](https://github.com/gabrieltf1901)
 
 Julia Gonzalez Pugliese Ribeiro - [JuliaPugliese](https://github.com/JuliaPugliese) 
-
