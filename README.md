@@ -22,14 +22,13 @@ Armazenar dados de produtos e usuários do site da Salesforce de maneira segura 
 O objetivo principal deste projeto de sistema de faturamento é calcular as contas automaticamente, ou seja, sem nenhum cálculo manual. Você deve começar a construir este projeto com uma interface simples que exigirá que o usuário insira o nome do item, o preço por unidade e a quantidade. De acordo com esses detalhes, o sistema irá gerar uma fatura mencionando o valor total de dinheiro que deve ser pago.
 
 ### Sistema de Login em Java
-O código acima cria um sistema de login em Java que pede ao usuário um nome de usuário e uma senha e verifica se as informações estão corretas.
+Sistema que pede ao usuário um nome de usuário e uma senha e verifica se as informações estão corretas.
 
 ### Lista de Compras
-Aplicativo de lista de compras: crie um aplicativo simples que permita ao usuário adicionar, editar e excluir itens de uma lista de compras.
+Aplicativo simples que permita ao usuário adicionar, editar e excluir itens de uma lista de compras.
 
 ### Sistema de gerenciamento de biblioteca:
-O projeto de gestão de bibliotecas, por sua vez, permite criar um sistema onde todas essas informações podem ser armazenadas e recuperadas eletronicamente em um banco de dados informatizado.
-O sistema precisa permitir o gerenciamento de livros, incluindo adição, edição, empréstimo e devolução. Além de permitir que bibliotecários e alunos encontrem livros sem complicações por meio de uma busca por nome e o autor.
+O projeto de gestão de bibliotecas, por sua vez, permite criar um sistema onde dados colhidos dos usuários, funcionários e livros para possíveis empréstimos e devoluções podem ser armazenadas e recuperadas eletronicamente em um banco de dados informatizado. O sistema precisa permitir o gerenciamento de livros, incluindo adição, edição, empréstimo e devolução. Além de permitir que bibliotecários e alunos encontrem livros sem complicações por meio de uma busca por nome e o autor.
 
 ## Funcionamento
 Todas as funções dos menus são implementadas através de métodos criados na classe main e o armazenamento de Usuários Cadastrados (classe Cliente), Administradores (classe Administrador), Produtos Cadastrados (classe Produto) e SucessPlans (classe Plano) é feito por meio de ArrayLists também implementadas na classe main.
@@ -46,7 +45,7 @@ Conforme o usuário escolhe o tipo de perfil o qual ele ira acessar ele é direc
 
 - **2. Administrador:** Abre o menu do administrador.
 
-- **0. Sair:** Para a execução do programa.
+- **3. Sair:** Para a execução do programa.
 
 ### Executando o programa como administrador
 
@@ -67,12 +66,12 @@ Para executar o programa como administrador o usuário deve possuir uma conta de
     31 . Editar informações dos planos de pagamento
 4. Cadastrar sucessplan
 	
-    31 . Editar informações dos sucessplans
+    41 . Editar informações dos sucessplans
 5. Consultar produto
 	
-    41 . Filtrar planos de pagamento por preço mais caro
+    51 . Filtrar planos de pagamento por preço mais caro
 
-	42 . Filtrar planos de pagamento por preço mais barato
+	52 . Filtrar planos de pagamento por preço mais barato
 0. Sair
 
 Conforme o usuário digita alguma dessas opções ele é direcionado a uma condição específica, onde: 
@@ -91,11 +90,11 @@ Conforme o usuário digita alguma dessas opções ele é direcionado a uma condi
 
 - **3. Cadastrar plano de pagamento:** , **4. Cadastrar sucessplan:** , **31. Editar informações dos planos de pagamento:** e **41. Editar informações dos sucessplans:** têm implementações similares a "Cadastrar produto" e "Editar informações do produto".
 
-- **4. Consultar produto:** permite que o usuário busque um produto ou plano por nome. 
+- **5. Consultar produto:** permite que o usuário busque um produto ou plano por nome. 
 
-    - **41. Filtrar planos de pagamento por preço mais caro:** e **42. Filtrar planos de pagamento por preço mais barato:** mostram todos os planos de pagamento disponíveis classificados por valor, do mais alto para o mais baixo e vice-versa.
+    - **51. Filtrar planos de pagamento por preço mais caro:** e **52. Filtrar planos de pagamento por preço mais barato:** mostram todos os planos de pagamento disponíveis classificados por valor, do mais alto para o mais baixo e vice-versa.
 
-- **0. Sair:** Para a execução do programa.
+- **6. Sair:** Para a execução do programa.
 
 ### Executando o programa como cliente
 
@@ -122,13 +121,13 @@ Conforme o usuário digita alguma dessas opções ele é direcionado a uma condi
 
     - **11. Editar informações de cadastro:** permite o usuário editar os seus dados inseridos na hora do cadastro inserindo seus dados de nome de usuário e senha e então digitando o nome do dado a ser editado (ex: telefone, e-mail corporativo), após isso é solicitado um novo dado e a informação é alterada.
 
-- **4. Consultar produto:** permite que o usuário busque um produto ou plano por nome. 
+- **2. Consultar produto:** permite que o usuário busque um produto ou plano por nome. 
 
-    - **41. Filtrar planos de pagamento por preço mais caro:** e **42. Filtrar planos de pagamento por preço mais barato:** mostram todos os planos de pagamento disponíveis classificados por valor, do mais alto para o mais baixo e vice-versa.
+    - **21. Filtrar planos de pagamento por preço mais caro:** e **22. Filtrar planos de pagamento por preço mais barato:** mostram todos os planos de pagamento disponíveis classificados por valor, do mais alto para o mais baixo e vice-versa.
 
 - **3. Enviar perguntas ou comentários:** Permite que o usuário envie perguntas ou comentários que ficam registrados na sua conta.
 
-- **0. Sair:** Para a execução do programa.
+- **4. Sair:** Para a execução do programa.
 
 
 ## Próximos passos
